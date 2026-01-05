@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/receiver.dir/receiver/receiver.c.o -o receiver 

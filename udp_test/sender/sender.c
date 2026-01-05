@@ -34,17 +34,15 @@ int main() {
     inet_pton(AF_INET, BROADCAST_IP, &broadcast_addr.sin_addr);
 
     // ==== 这里是你预留的广播内容空间 ====
-    char message[MAX_MSG_LEN] = "Hello, this is a UDP broadcast message from C program! 你好，这是广播消息！";
-    // 你可以修改上面这行，或者在运行时动态填充，比如：
-    // snprintf(message, MAX_MSG_LEN, "当前时间: %ld", time(NULL));
+    char message[MAX_MSG_LEN];
 
-    printf("正在广播消息：%s\n", message);
-    printf("按 Enter 键发送一次广播，输入 'q' + Enter 退出...\n");
+    printf("正在广播消息\n");
+    printf("按 Enter 键发送一次广播，按 Ctrl+C 退出\n");
 
     while (1) {
-        char input = getchar();
-        if (input == 'q' || input == 'Q') break;
-        while (getchar() != '\n');  // 清空输入缓冲区
+        if (fgets(message, sizeof(message), stdin) == NULL) {
+            break;  // EOF 或错误
+        }
 
         // 发送广播
         ssize_t sent = sendto(sockfd, message, strlen(message), 0,

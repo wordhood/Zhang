@@ -1,0 +1,4 @@
+/home/zyh/Project/Zhang/udp_test/build/CMakeFiles/sender.dir
+/home/zyh/Project/Zhang/udp_test/build/CMakeFiles/receiver.dir
+/home/zyh/Project/Zhang/udp_test/build/CMakeFiles/edit_cache.dir
+/home/zyh/Project/Zhang/udp_test/build/CMakeFiles/rebuild_cache.dir

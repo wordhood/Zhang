@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/sender.dir/sender/sender.c.o -o sender 

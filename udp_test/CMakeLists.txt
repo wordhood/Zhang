@@ -9,11 +9,11 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 
 # 添加发送端可执行文件
 add_executable(sender
-    sender/udp_broadcast_sender.c
+    sender/sender.c
 )
 
 # 添加接收端可执行文件
 add_executable(receiver
-    receiver/udp_broadcast_receiver.c
+    receiver/receiver.c
 )
 
